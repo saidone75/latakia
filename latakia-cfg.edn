@@ -1,0 +1,38 @@
+{:validation-email
+ {:from "do-not-reply@3x1t.org"
+  :subject "[3x1t.org] Richiesta di registrazione al servizio di chat"
+  :body "Si prega di visitare il seguente indirizzo per completare la registrazione:\r\n"
+  }
+ :user-activated-email
+ {:from "do-not-reply@3x1t.org"
+  :subject "Utenza attivata"
+  :body "La tua utenza è stata attivata, qui troverai le istruzioni per configurare i tuoi dispositivi: https://server.3x1t.org/cloud/index.php/s/HWwkfiW8LMFrKKK"
+  }
+ :mail-server-host "10.8.6.1"
+ :activate-user-scheme "http"
+ :activate-user-host "192.168.33.10"
+ :activate-user-port "10555"
+ :db-location "db.json"
+ :prosodyctl-adduser "prosodyctl-adduser.sh"
+ :prosodyctl-passwd "prosodyctl-passwd.sh"
+ :dictionaries
+ {:it-IT
+  {:missing "testo mancante"
+   :mail-address-placeholder "Email"
+   :username-placeholder "Nome utente"
+   :password-placeholder "Password"
+   :password-repeat-placeholder "Ripeti la password"
+   :submit "Invia"
+   :mail-address-empty "l'indirizzo e-mail non può essere vuoto"
+   :mail-address-invalid "l'indirizzo e-mail non è valido"
+   :username-empty "il nome utente non può essere vuoto"
+   :username-invalid "il nome utente non è valido"
+   :username-taken "il nome utente è già in uso"
+   :password-empty "la password non può essere vuota"
+   :password-invalid "la password non è valida: deve contenere minimo 25 caratteri di cui almeno una lettera maiuscola, una lettera minuscola e un numero"
+   :password-mismatch "le password non coincidono"
+   :intro-text "Questa è la pagina di creazione dell'account di chat Exit"
+   :mail-sent-message "controlla la posta"
+   :error "errore"
+   }}
+ }

@@ -1,0 +1,95 @@
+input[type=text] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid #575757;
+    border-radius: 20px;
+}
+
+input[type=password] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid #575757;
+    border-radius: 20px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+input {
+    color: #575757;
+    font-family: arial;
+    font-size: inherit;
+}
+
+input.large {
+    width: 30%;
+}
+
+input.small {
+    width: 70%;
+}
+
+input[type=submit] {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #4285f6;
+    background-color: #4285f6;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.form {
+    width: 100%;
+    text-align: center;
+    color: #575757;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.message {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+    text-align: center;
+    font-family: arial;
+    font-size: inherit;
+    font-weight: 600;
+    line-height: 1.6;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.message hr {
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.show-message-error {
+    opacity: 1;
+    visibility: visible;
+    background-color: #f5c002;
+}
+
+.show-message-success {
+    opacity: 1;
+    visibility: visible;
+    background-color: #30a955;
+}
+
+.intro {
+    margin-top: 20px;
+    font-family: arial;
+    font-weight: 600;
+    color: #575757;
+}
