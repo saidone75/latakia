@@ -12,8 +12,3 @@ pom.xml.asc
 .lein-failures
 .nrepl-port
 .cpcache/
-.dir-locals.el
-.lein-env
-/log/
-*.rej
-/resources/public/js/

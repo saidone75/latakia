@@ -1,3 +1,13 @@
-#! /bin/bash
+#!/usr/bin/expect -f
 
-exit 1
+spawn sudo prosodyctl passwd [lindex $argv 0]
+
+expect "Enter new password: "
+
+send -- "[lindex $argv 1]\r"
+
+expect "Retype new password: "
+
+send -- "[lindex $argv 1]\r"
+
+expect eof
