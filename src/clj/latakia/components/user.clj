@@ -43,7 +43,7 @@
               :token (secrets/token-urlsafe 32)
               :timestamp (quot (System/currentTimeMillis) 1000)})
       (db/write-db!)
-      (mail/send-validation-mail email (:token (get @db/pending-requests (keyword username))))
+      (mail/send-validation-mail username email (:token (get @db/pending-requests (keyword username))))
       (swap! result assoc :message (tp [:mail-sent-message])))
     @result))
 
@@ -55,4 +55,4 @@
       (do
         (swap! db/pending-requests dissoc (key entry))
         (db/write-db!)
-        (mail/send-activated-mail (:email (val entry)))))))
+        (mail/send-activated-mail (name (key entry)) (:email (val entry)))))))

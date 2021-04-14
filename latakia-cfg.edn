@@ -1,13 +1,7 @@
-{:validation-email
- {:from "do-not-reply@3x1t.org"
-  :subject "[3x1t.org] Richiesta di registrazione al servizio di chat"
-  :body "Si prega di visitare il seguente indirizzo per completare la registrazione:\r\n"
-  }
- :user-activated-email
- {:from "do-not-reply@3x1t.org"
-  :subject "Utenza attivata"
-  :body "La tua utenza è stata attivata, qui troverai le istruzioni per configurare i tuoi dispositivi: https://server.3x1t.org/cloud/index.php/s/HWwkfiW8LMFrKKK"
-  }
+{:validation-email {:from "do-not-reply@3x1t.org"
+                    :notify-address nil}
+ :user-activated-email {:from "do-not-reply@3x1t.org"
+                        :notify-address nil}
  :mail-server-host "10.8.6.1"
  :activate-user-scheme "http"
  :activate-user-host "192.168.33.10"
@@ -17,7 +11,8 @@
  :prosodyctl-passwd "prosodyctl-passwd.sh"
  :dictionaries
  {:it-IT
-  {:missing "testo mancante"
+  {:error "errore"
+   :missing "testo mancante"
    :mail-address-placeholder "Email"
    :username-placeholder "Nome utente"
    :password-placeholder "Password"
@@ -33,6 +28,13 @@
    :password-mismatch "le password non coincidono"
    :intro-text "Questa è la pagina di creazione dell'account di chat Exit"
    :mail-sent-message "controlla la posta"
-   :error "errore"
+   :validation-email-subject "[3x1t.org] Richiesta di registrazione al servizio di chat"
+   :validation-email-body "Si prega di visitare il seguente indirizzo per completare la registrazione:\r\n"
+   :validation-notify-email-subject "[3x1t.org] Richiesta di registrazione"
+   :validation-notify-email-body "L'utente \"%1\" con indirizzo \"%2\" ha richiesto l'iscrizione alla chat."
+   :user-activated-email-subject "[3x1t.org] Utenza attivata"
+   :user-activated-email-body "La tua utenza è stata attivata, qui troverai le istruzioni per configurare i tuoi dispositivi: https://server.3x1t.org/cloud/index.php/s/HWwkfiW8LMFrKKK"
+   :user-activated-notify-email-subject "[3x1t.org] Utenza \"%1\" attivata"
+   :user-activated-notify-email-body "L'utente \"%1\" con indirizzo \"%2\" ha attivato il suo account per la chat."
    }}
  }
