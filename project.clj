@@ -11,7 +11,7 @@
                  [ring "1.7.1"]
                  [ring/ring-defaults "0.3.2"]
                  [bk/ring-gzip "0.3.0"]
-                 [radicalzephyr/ring.middleware.logger "0.6.0"]
+                 [ring-logger "1.0.1"]
                  [clj-logging-config "1.9.12"]
                  [environ "1.1.0"]
                  [com.stuartsierra/component "0.3.2"]
