@@ -35,6 +35,6 @@
    :user-activated-email-subject "[3x1t.org] Utenza attivata"
    :user-activated-email-body "La tua utenza è stata attivata, qui troverai le istruzioni per configurare i tuoi dispositivi: https://server.3x1t.org/cloud/index.php/s/HWwkfiW8LMFrKKK"
    :user-activated-notify-email-subject "[3x1t.org] Utenza \"%1\" attivata"
-   :user-activated-notify-email-body "L'utente \"%1\" con indirizzo \"%2\" ha attivato il suo account per la chat."
+   :user-activated-notify-email-body "L'utente \"%1\" con indirizzo \"%2\" ha attivato l'account per la chat."
    }}
  }
