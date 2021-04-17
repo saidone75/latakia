@@ -6,7 +6,7 @@ A simple web app to ease self registration by e-mail on Prosody IM (but virtuall
 
 
 ## License
-Copyright (c) 2020-2021 Saidone
+Copyright (c) 2021 Saidone
 
 Distributed under the GPL-3.0 License
 
