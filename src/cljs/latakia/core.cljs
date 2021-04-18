@@ -1,5 +1,6 @@
 (ns latakia.core
-  (:require [reagent.core :as reagent :refer [atom]]
+  (:require [reagent.core :as r]
+            [reagent.dom :as rdom]
             [ajax.core :refer [GET]]
             [cognitect.transit :as t]
             [clojure.string :as s]
@@ -7,7 +8,7 @@
 
 (enable-console-print!)
 
-(def dictionary (atom {}))
+(def dictionary (r/atom {}))
 
 (defn dictionary-handler [response]
   (let [r (t/reader :json)
@@ -31,9 +32,9 @@
                        "large"
                        "small"))
 
-(def messages (atom {}))
+(def messages (r/atom {}))
 
-(def s (atom {}))
+(def s (r/atom {}))
 
 (defn- hide-message [id]
   (-> (.getElementById js/document id) (aget "classList") (.remove "show-message-error"))
@@ -136,29 +137,29 @@
                          (show-errors)))}
    [:input {:class input-class
             :type :text :placeholder (:mail-address-placeholder @dictionary)
-            :value (:email @s)
+            :value (or (:email @s) "")
             :on-change (fn [e]
                          (swap! s assoc :email (-> e .-target .-value)))}]
    [:br]
    [:input {:class input-class
             :type :text :placeholder (:username-placeholder @dictionary)
-            :value (:username @s)
+            :value (or (:username @s) "")
             :on-change (fn [e]
                          (swap! s assoc :username (-> e .-target .-value)))}]
    [:br]
    [:input {:class input-class
             :type :password :placeholder (:password-placeholder @dictionary)
-            :value (:password @s)
+            :value (or (:password @s) "")
             :on-change (fn [e]
                          (swap! s assoc :password (-> e .-target .-value)))}]
    [:br]
    [:input {:class input-class
             :type :password :placeholder (:password-repeat-placeholder @dictionary)
-            :value (:password-repeat @s)
+            :value (or (:password-repeat @s) "")
             :on-change (fn [e]
                          (swap! s assoc :password-repeat (-> e .-target .-value)))}]
    [:br]
-   [:input {:class input-class :type :submit :value (:submit @dictionary)}]])
+   [:input {:class input-class :type :submit :value (or (:submit @dictionary) "")}]])
 
 (defn- page []
   [:div {:class "form"}
@@ -171,4 +172,4 @@
     ]])
 
 (defn render []
-  (reagent/render-component [page] (.getElementById js/document "app")))
+  (rdom/render [page] (.getElementById js/document "app")))
