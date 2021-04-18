@@ -4,22 +4,23 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.10.0"]
-                 [org.clojure/clojurescript "1.10.439" :scope "provided"]
-                 [com.cognitect/transit-clj "0.8.313"]
+  :dependencies [[org.clojure/clojure "1.10.3"]
+                 [org.clojure/clojurescript "1.10.844" :scope "provided"]
+                 [com.cognitect/transit-clj "1.0.324"]
                  [com.cognitect/transit-cljs "0.8.264"]
-                 [ring "1.7.1"]
+                 [ring "1.9.2"]
                  [ring/ring-defaults "0.3.2"]
                  [bk/ring-gzip "0.3.0"]
                  [ring-logger "1.0.1"]
                  [clj-logging-config "1.9.12"]
-                 [environ "1.1.0"]
-                 [com.stuartsierra/component "0.3.2"]
-                 [org.danielsz/system "0.4.1"]
-                 [org.clojure/tools.namespace "0.2.11"]
-                 [compojure "1.6.1"]
-                 [reagent "0.8.1"]
-                 [cljs-ajax "0.8.1"]
+                 [environ "1.2.0"]
+                 [com.stuartsierra/component "1.0.0"]
+                 [org.danielsz/system "0.4.7"]
+                 [org.clojure/tools.namespace "1.1.0"]
+                 [clj-time "0.15.2"]
+                 [compojure "1.6.2"]
+                 [reagent "1.0.0"]
+                 [cljs-ajax "0.8.3"]
                  [likid_geimfari/secrets "0.2.0"]
                  [me.raynes/conch "0.8.0"]
                  [com.draines/postal "2.0.4"]
@@ -27,8 +28,8 @@
                  [levand/immuconf "0.1.0"]
                  [com.taoensso/tempura "1.2.1"]]
 
-  :plugins [[lein-cljsbuild "1.1.7"]
-            [lein-environ "1.1.0"]]
+  :plugins [[lein-cljsbuild "1.1.8"]
+            [lein-environ "1.2.0"]]
 
   :min-lein-version "2.6.1"
 
@@ -107,10 +108,10 @@
   :doo {:build "test"}
 
   :profiles {:dev
-             {:dependencies [[figwheel "0.5.18"]
-                             [figwheel-sidecar "0.5.18"]
-                             [cider/piggieback "0.4.0"]
-                             [cider/cider-nrepl "0.18.0"]
+             {:dependencies [[figwheel "0.5.20"]
+                             [figwheel-sidecar "0.5.20"]
+                             [cider/piggieback "0.5.2"]
+                             [cider/cider-nrepl "0.25.11"]
                              [lein-doo "0.1.11"]
                              [reloaded.repl "0.2.4"]]
 
