@@ -26,7 +26,8 @@
                  [com.draines/postal "2.0.4"]
                  [com.taoensso/timbre "5.1.2"]
                  [levand/immuconf "0.1.0"]
-                 [com.taoensso/tempura "1.2.1"]]
+                 [com.taoensso/tempura "1.2.1"]
+                 [buddy/buddy-core "1.9.0"]]
 
   :plugins [[lein-cljsbuild "1.1.8"]
             [lein-environ "1.2.0"]]

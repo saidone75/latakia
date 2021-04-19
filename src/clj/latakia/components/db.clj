@@ -2,9 +2,14 @@
   (:require [clojure.java.io :as io]
             [cognitect.transit :as transit]
             [latakia.config :as config]
-            [immuconf.config :as immu]))
+            [immuconf.config :as immu]
+            [buddy.core.crypto :as crypto]
+            [buddy.core.codecs :as codecs]
+            [buddy.core.nonce :as nonce]))
 
 (def pending-requests (atom {}))
+
+(def key32 nil)
 
 (defn exists-db? []
   (.exists (io/file
