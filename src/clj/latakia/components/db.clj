@@ -25,7 +25,7 @@
     (with-open [o (clojure.java.io/output-stream (immu/get config :db-location))]
       (let [writer (transit/writer o :json)]
         (transit/write writer [@pending-requests])))
-    (io/delete-file backup-db)))
+    (when (.exists (io/file backup-db)) (io/delete-file backup-db))))
 
 (defn load-db! []
   (when-not (exists-db?) (write-db!))
