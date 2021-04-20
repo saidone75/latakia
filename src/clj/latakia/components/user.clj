@@ -5,6 +5,7 @@
             [latakia.components.mail :as mail]
             [latakia.components.db :as db]
             [latakia.components.dictionary :as dict]
+            [latakia.components.crypto :as crypto]
             [taoensso.tempura :as tempura :refer [tr]]))
 
 (def opts {:dict (dict/get-dictionary "it-IT")})
@@ -39,7 +40,7 @@
     (when-not (:error @result)
       (swap! db/pending-requests assoc (keyword username)
              {:email email
-              :password password
+              :password (crypto/encrypt password)
               :token (secrets/token-urlsafe 32)
               :timestamp (quot (System/currentTimeMillis) 1000)})
       (db/write-db!)
@@ -48,9 +49,10 @@
     @result))
 
 (defn activate-user [{token :token}]
+  (db/load-db!)
   (let [entry (first (filter #(= token (:token (val %))) @db/pending-requests))]
     (if (or (nil? entry)
-            (not (prosody/passwd (str (name (key entry)) "@3x1t.org") (:password (val entry)))))
+            (not (prosody/passwd (str (name (key entry)) "@3x1t.org") (crypto/decrypt (:password (val entry))))))
       false
       (do
         (swap! db/pending-requests dissoc (key entry))
