@@ -9,7 +9,8 @@
             [latakia.config :as config]
             [immuconf.config :as immu]
             [cognitect.transit :as t]
-            [taoensso.tempura :as tempura :refer [tr]]))
+            [taoensso.tempura :as tempura :refer [tr]]
+            [project-clj.core :as project-clj]))
 
 (import [java.io ByteArrayOutputStream])
 
@@ -42,6 +43,10 @@
               writer (t/writer out :json)]
           (t/write writer (dict/get-dictionary (:params request)))
           {:body (.toString out)}))
+   (GET "/showversion" request
+        {:status 200
+         :headers {"Content-Type" "text/plain"}
+         :body (str (project-clj/get :name) " v" (project-clj/get :version))})
    (ANY "*" _
         (-> "public/index.html"
             io/resource

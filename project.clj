@@ -1,8 +1,8 @@
-(defproject latakia "1.0.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "https://www.3x1t.org"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+(defproject latakia "0.1"
+  :description "A simple web app to ease self registration by e-mail on Prosody IM"
+  :url "https://github.com/saidone75/latakia"
+  :license {:name "GNU General Public License v3.0"
+            :url "https://github.com/saidone75/latakia/blob/main/LICENSE"}
 
   :dependencies [[org.clojure/clojure "1.10.3"]
                  [org.clojure/clojurescript "1.10.844" :scope "provided"]
@@ -27,7 +27,8 @@
                  [com.taoensso/timbre "5.1.2"]
                  [levand/immuconf "0.1.0"]
                  [com.taoensso/tempura "1.2.1"]
-                 [lock-key "1.5.0"]]
+                 [lock-key "1.5.0"]
+                 [jp.ne.tir/project-clj "0.1.7"]]
 
   :plugins [[lein-cljsbuild "1.1.8"]
             [lein-environ "1.2.0"]]
