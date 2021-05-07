@@ -10,6 +10,18 @@ A simple web app to ease self registration by e-mail on Prosody IM (but virtuall
 - sudo
 - expect
 
+## Build
+JDK / Clojure / [Leiningen](https://leiningen.org/#install) toolchain is required
+
+Then get the sources:
+```
+$ git clone https://github.com/saidone75/latakia
+```
+and compile with:
+```
+$ cd latakia
+$ lein uberjar
+```
 ## License
 Copyright (c) 2021 Saidone
 
