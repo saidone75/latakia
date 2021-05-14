@@ -113,7 +113,7 @@
              {:dependencies [[figwheel "0.5.20"]
                              [figwheel-sidecar "0.5.20"]
                              [cider/piggieback "0.5.2"]
-                             [cider/cider-nrepl "0.25.11"]
+                             [cider/cider-nrepl "0.26.0"]
                              [lein-doo "0.1.11"]
                              [reloaded.repl "0.2.4"]]
 
