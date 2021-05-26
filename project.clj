@@ -5,7 +5,7 @@
             :url "https://github.com/saidone75/latakia/blob/main/LICENSE"}
 
   :dependencies [[org.clojure/clojure "1.10.3"]
-                 [org.clojure/clojurescript "1.10.844" :scope "provided"]
+                 [org.clojure/clojurescript "1.10.866" :scope "provided"]
                  [com.cognitect/transit-clj "1.0.324"]
                  [com.cognitect/transit-cljs "0.8.269"]
                  [ring "1.9.3"]
