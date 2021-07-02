@@ -1,6 +1,7 @@
 (ns latakia.components.dictionary
   (:require [latakia.config :as config]
-            [immuconf.config :as immu]))
+            [immuconf.config :as immu]
+            [clojure.string :as s]))
 
 (defn get-dictionary [params]
   (:dictionaries (config/config)))
