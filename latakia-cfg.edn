@@ -36,5 +36,6 @@
    :user-activated-email-body "La tua utenza è stata attivata, qui troverai le istruzioni per configurare i tuoi dispositivi: https://server.3x1t.org/cloud/index.php/s/HWwkfiW8LMFrKKK"
    :user-activated-notify-email-subject "[3x1t.org] Utenza \"%1\" attivata"
    :user-activated-notify-email-body "L'utente \"%1\" con indirizzo \"%2\" ha attivato l'account per la chat."
+   :foot-note "L'invio della richiesta presuppone l'accettazione dello spirito della comunità EXIT, che offre questo servizio gratuitamente. Ti chiediamo di partecipare alle discussioni sul tema della sorveglianza e della lesione del diritto alla riservatezza. Il tuo indirizzo mail sarà iscritto alla nostra newsletter, e alla mailing list di discussione generale. Ci si può disiscrivere con una procedura automatica, ma ti preghiamo di considerare le nostre istanze e il nostro impegno, prima di farlo."
    }}
  }

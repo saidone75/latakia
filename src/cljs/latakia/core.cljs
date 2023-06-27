@@ -162,14 +162,19 @@
    [:input {:class input-class :type :submit :value (or (:submit @dictionary) "")}]])
 
 (defn- page []
-  [:div {:class "form"}
-   [:img {:src "https://www.3x1t.org/wp-content/uploads/2020/01/logo-150x89.png"}]
-   [:div {:class "intro"} (:intro-text @dictionary)]
-   (form)
-   [:div {:id "message" :class "message"}
-    (map #(list (val %) ^{:key (random-uuid)} [:br] ^{:key (random-uuid)} [:hr]) (butlast @messages))
-    (when (last @messages) (val (last @messages)))
-    ]])
+  [:div {:class "page"}
+   [:div {:class "form"}
+    [:img {:src "https://www.3x1t.org/wp-content/uploads/2020/01/logo-150x89.png"}]
+    [:div {:class "intro"} (:intro-text @dictionary)]
+    (form)
+    [:div {:id "message" :class "message"}
+     (map #(list (val %) ^{:key (random-uuid)} [:br] ^{:key (random-uuid)} [:hr]) (butlast @messages))
+     (when (last @messages) (val (last @messages)))
+     ]
+    ]
+   [:div {:class "footer"}
+    (:foot-note @dictionary)]
+   ])
 
 (defn render []
   (rdom/render [page] (.getElementById js/document "app")))

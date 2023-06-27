@@ -93,3 +93,10 @@ input:focus {
     font-weight: 600;
     color: #575757;
 }
+
+.footer {
+    text-align: justify;
+    font-family: arial;
+    font-weight: 600;
+    color: #575757;
+}
