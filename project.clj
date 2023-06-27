@@ -1,4 +1,4 @@
-(defproject latakia "0.1"
+(defproject latakia "0.2"
   :description "A simple web app to ease self registration by e-mail on Prosody IM"
   :url "https://github.com/saidone75/latakia"
   :license {:name "GNU General Public License v3.0"
