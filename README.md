@@ -23,7 +23,7 @@ $ cd latakia
 $ lein uberjar
 ```
 ## License
-Copyright (c) 2021 Saidone
+Copyright (c) 2021-2023 Saidone
 
 Distributed under the GPL-3.0 License
 
