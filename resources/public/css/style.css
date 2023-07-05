@@ -95,8 +95,11 @@ input:focus {
 }
 
 .footer {
-    text-align: justify;
-    font-family: arial;
-    font-weight: 600;
-    color: #575757;
+  text-align: justify;
+  font-family: Courier New, monospace;
+  font-weight: 100;
+  color: #575757;
+  left: 10%;
+  position: absolute;
+  right: 10%;
 }
