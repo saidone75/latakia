@@ -1,14 +1,14 @@
 {:validation-email {:from "do-not-reply@3x1t.org"
-                    :notify-address nil}
+                    :notify-address "3x1t@3x1t.org"}
  :user-activated-email {:from "do-not-reply@3x1t.org"
-                        :notify-address nil}
- :mail-server-host "10.8.6.1"
- :activate-user-scheme "http"
- :activate-user-host "192.168.33.10"
- :activate-user-port "10555"
+                        :notify-address "3x1t@3x1t.org"}
+ :mail-server-host "localhost"
+ :activate-user-scheme "https"
+ :activate-user-host "attivazione.3x1t.org"
+ :activate-user-port "443"
  :db-location "db.json"
- :prosodyctl-adduser "prosodyctl-adduser.sh"
- :prosodyctl-passwd "prosodyctl-passwd.sh"
+ :prosodyctl-adduser "/home/latakia/LATAKIA/prosodyctl-adduser.sh"
+ :prosodyctl-passwd "/home/latakia/LATAKIA/prosodyctl-passwd.sh"
  :dictionaries
  {:it-IT
   {:error "errore"
@@ -21,7 +21,7 @@
    :mail-address-empty "l'indirizzo e-mail non può essere vuoto"
    :mail-address-invalid "l'indirizzo e-mail non è valido"
    :username-empty "il nome utente non può essere vuoto"
-   :username-invalid "il nome utente non è valido"
+   :username-invalid "il nome utente non è valido, ricorda di NON utilizzare MAIUSCOLE e/o spazi tra i caratteri!"
    :username-taken "il nome utente è già in uso"
    :password-empty "la password non può essere vuota"
    :password-invalid "la password non è valida: deve contenere minimo 25 caratteri di cui almeno una lettera maiuscola, una lettera minuscola e un numero"
@@ -39,3 +39,4 @@
    :foot-note ["L'invio della richiesta presuppone l'accettazione dello spirito della comunità " [:a {:href "https://3x1t.org"} "EXIT"] ", che offre questo servizio gratuitamente. Ti chiediamo di partecipare alle discussioni sul tema della sorveglianza e della lesione del diritto alla riservatezza. Il tuo indirizzo mail sarà iscritto alla nostra newsletter, e alla mailing list di discussione generale. Ci si può disiscrivere con una procedura automatica, ma ti preghiamo di considerare le nostre istanze e il nostro impegno, prima di farlo."]
    }}
  }
+
